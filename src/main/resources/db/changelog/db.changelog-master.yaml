@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTable-example
+      author: reproducer
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: long
+                  constraints:
+                    nullable: false
+            tableName: dummy_entity
+        -  addPrimaryKey:
+             columnNames:  id
+             tableName:  dummy_entity
